@@ -13,7 +13,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="">
+  <a href="https://ham47mani.github.io/AXIT/">
     <img src="imgs/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -22,7 +22,7 @@
   <p align="center">
     AXIT is a creative & awesome HTML template 
     <br />
-    <a href="">View Demo</a>
+    <a href="https://ham47mani.github.io/AXIT/">View Demo</a>
     ·
     <a href="https://github.com/Ham47Mani/AXIT/issues">Report Bug</a>
     ·

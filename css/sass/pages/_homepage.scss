@@ -1,0 +1,397 @@
+//======================================= Start Header ============================
+header {
+    background: url('../imgs/Header/header_pg.png') no-repeat top center;
+    @include bgCover;
+    min-height: 100vh;
+    color: #FFF;
+    padding-top: 100px;
+    font-family: 'Raleway', sans-serif;
+    h1 { font-size: 75px }
+    .h1 {
+        margin-bottom: 40px;
+        &:after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 3px;
+            background: #FFF;
+            margin: 30px 0 0 0
+        }
+    }
+    .lead { font-size: 16px; font-weight: 300; color: #AAA; margin-bottom: 40px }
+    button {
+        padding: 8px 30px;
+        background: transparent;
+        border: 2px solid #FFF;
+        border-radius: 6px;
+        font-weight: 600;
+        @include prefixAll(transition, all .4s ease-in-out);
+        &:hover { background: var(--main-Color); border-color: var(--main-Color) }
+    }
+    form {
+        margin-top: 60px;
+        width: 360px;
+        overflow: hidden;
+        background: #FFF;
+        color: #333;
+        border-radius: 6px;
+        margin-bottom: 60px;
+        .h4 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: bold;
+            background: #F5F5F5;
+            padding: 15px;
+            margin: 0 auto 30px;
+        }
+        .form-control {
+            border: none;
+            box-shadow: none;
+            border-radius: 0;
+            width: 80%;
+            margin: 15px auto 0;
+            border-bottom: 1px solid #EEE;
+            font-weight: 600;
+            &:focus { border: none; box-shadow: none; border-bottom: 2px solid #EEE }
+            &::placeholder { color: #bdbdbd; font-weight: 400; font-size: 14px }
+        }
+        input[type="submit"] {
+            margin-top: 40px;
+            width: 100%;
+            border: none;
+            background: #ff9b51;
+            color: #FFF;
+            font-weight: bold;
+            padding: 15px
+        }
+    }
+
+    //--> Style Header In Small Screen
+    @include SScreen {
+        h1, .lead { text-align: center }
+        .h1 {
+            text-align: center; font-size: 25px;
+            &:after { margin: 30px auto 0 }
+        }
+        button { display: block; margin: auto }
+        form { width: 100% }
+    }
+    //--> Style Header In Medium Screen
+    @include MScreen {
+        h1, .lead { text-align: center }
+        .h1 {
+            text-align: center; font-size: 25px;
+            &:after { margin: 30px auto 0 }
+        }
+        button { display: block; margin: auto }
+    }
+}
+//======================================= End Header ============================
+
+//======================================= Start Social Media ============================
+.social {
+    box-shadow: 0 -5px 28px #CCC; overflow: hidden;
+    h3 { font-weight: bold; color: #333 }
+    p { font-weight: 300; color: #86878b }
+    i {
+        color: #CCC;
+        width: calc(100%/7);
+        float: right;
+        line-height: 3;
+        text-align: right;
+        cursor: pointer;
+        @include prefixAll(transition, all .4s ease-in-out);
+    }
+    //--> Style Social Media Section In Small Screen
+    @include SScreen {
+        h3, p, i { text-align: center }
+    }
+}
+//======================================= End Social Media ============================
+
+//======================================= Start Tabs Section ============================
+.tebs-section {
+    padding: 130px 0; background: #F5F5F5;
+    //--> Nav Tabs
+    .nav-tabs {
+        border-bottom: none;
+        li {
+            float: none;
+            margin-bottom: 0;
+            border-bottom: 1px solid #FFF;
+            a {
+                height: 110px;
+                background-color: #333;
+                color: #FFF;
+                border: none;
+                border-radius: 0;
+                line-height: 110px;
+                padding: 0;
+                font-weight: bold
+            }
+            &:first-of-type a { border-radius: 6px 6px 0 0 }
+            &:last-of-type a { border-radius: 0 0 6px 6px }
+            a:hover, &.active a { background: var(--main-Color); cursor: pointer; color: #FFF }
+        }
+    }
+    //--> Pan Tabs
+    .tab-pane {
+        padding: 0 0 0 50px;
+        h3 { font-weight: bold; margin: 0 0 50px; font-size: 20px }
+        p { color: #86878b; margin-bottom: 45px; font-weight: 300; font-size: 16px }
+        button {
+            padding: 10px 30px;
+            font-weight: 600;
+            font-size: 16px;
+            background: var(--main-Color);
+            border: none;
+            color: #FFF;
+            border-radius: 6px;
+            box-shadow: -2px 2px 5px #AAA;
+        }
+    }
+    //--> Style Of Tabs Section In Small Screen
+    @include SScreen {
+        padding: 50px 0;
+        .nav-tabs {
+            margin-bottom: 30px;
+            li {
+                display: inline-block; width: 32.333%;
+                a { height: auto; line-height: 30px }
+                &:first-of-type a { border-radius: 6px 0 0 6px }
+                &:last-of-type a { border-radius: 0 6px 6px 0 }
+            }
+        }
+        .tab-content {
+            margin-top: 40px;
+            .tab-pane {
+                padding: 0;
+                h3 { margin-bottom: 25px }
+                button {
+                    margin-left: auto;
+                    margin-right: auto;
+                    display: block;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+    }
+    //--> Style Of Tabs Section In Medium Screen
+    @include MScreen {
+        .nav-tabs {
+            float: none;
+            margin-bottom: 40px;
+            li a { height: auto; line-height: normal; padding: 20px 0 }
+        }
+    }
+}
+//======================================= End Tabs Section ============================
+
+//======================================= Start Sublist Section ============================
+.feuter-section {
+    padding: 80px 0; background: #FFF;
+    img { margin: 30px auto 0; box-shadow: -1px 5px 40px #AAA }
+    h4 { font-weight: bold; font-size: 20px; margin-bottom: 30px }
+    p { font-weight: 300; color: #86878b }
+    ul {
+        margin-top: 50px;
+        li {
+            margin-bottom: 55px;
+            i {
+                width: 40px;
+                height: 40px;
+                line-height: 37px;
+                border: 2px solid var(--main-Color);
+                color: var(--main-Color);
+                border-radius: 50%
+            }
+            .content {
+                width: calc(100% - 65px); float: right;
+                h5 { font-weight: bold; margin: 0 0 6px 0; font-size: 17px }
+            }
+        }
+    }
+    //--> Style Of Sublist Section In Small Screen
+    @include SScreen {
+        padding: 40px 0;
+        h4 { text-align: center }
+        .head-border:after { margin: 25px auto 0 }
+        ul li {
+            overflow: hidden; margin-bottom: 30px;
+            i { display: block; margin: 0 auto 20px }
+            .content {
+                width: 100%;
+                h5, p { text-align: center }
+            }
+        }
+    }
+}
+//======================================= End Sublist Section ============================
+
+//======================================= Start Standard Section ============================
+.standard {
+    background: #F5F5F5; padding-bottom: 90px;
+    .divad { margin: 25px }
+}
+//======================================= End Standard Section ============================
+
+//======================================= Start Awesome Section ============================
+.awesome {
+    padding: 80px 0 20px; background: #FFF;
+    .container > p { margin-bottom: 50px }
+    p { font-weight: 300; color: #86878b }
+    i {
+        width: 60px;
+        height: 60px;
+        font-size: 30px;
+        border: 2px solid #ff8b38;
+        border-radius: 50%;
+        line-height: 55px
+    }
+    h3 { font-size: 20px; font-weight: bold }
+    h3 ~ p { margin-bottom: 40px }
+}
+//======================================= End Awesome Section ============================
+
+//======================================= Start Price Section ============================
+.price {
+    padding: 80px 0 20px; background: #F5F5F5;
+    p { font-weight: 300; color: #86878b; margin-bottom: 80px }
+    //--> Price Plan
+    .pricing-plan {
+        margin: 0 auto 40px;
+        &.plan2 { margin-top: -40px }
+        h3 {
+            padding: 18px 0;
+            border-bottom: 1px solid #FFF;
+            font-weight: bold;
+            font-size: 20px;
+            background: #333;
+            color: #FFF;
+            margin: 0;
+        }
+        .pricing {
+            background: #333;
+            color: #FFF;
+            border-bottom: 4px solid var(--main-Color);
+            .cost {
+                display: block; font-size: 95px; font-weight: bold;
+                i { font-size: 35px; margin-right: 10px }
+            }
+            span:last-of-type { font-weight: 600; color: #adadad; margin-bottom: 20px; display: block }
+            .popular { padding: 11px 0; background: var(--main-Color); font-weight: bold }
+        }
+        ul {
+            background: #FFF; margin: 0; padding: 0;
+            li { padding: 10px 0; border-bottom: 1px solid #F5F5F5; color: #86878b }
+        }
+    }
+    //--> Style Of Price Section In Small Screen
+    @include SScreen {
+        padding-top: 40px;
+        .plan { margin-bottom: 30px }
+        .pricing-plan.plan2 { margin-top: 0 }
+    }
+}
+//======================================= End Price Section ============================
+
+//======================================= Start Testimonial Section ============================
+.testimonials {
+    padding: 100px 0 60px; background: #FFF;
+    .container > p { font-weight: 300; color: #86878b; margin-bottom: 50px }
+    //--> Testim
+    .testim {
+        margin-bottom: 40px;
+        & > p {
+            color: #86878b;
+            background: #f5f5f5;
+            padding: 20px 10px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            position: relative;
+            &:after {
+                content: "";
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-color: #F5F5F5 transparent;
+                border-width: 15px 15px 0 15px;
+                position: absolute;
+                left: 50px;
+                bottom: -14px;
+            }
+        }
+        .media .media-object { border: 1px solid #F5F5F5; border-radius: 50%; padding: 4px }
+        .media-heading { font-weight: bold; font-size: 20px; margin-top: 20px }
+        .media .media-body p { color: #86878b; font-weight: 300 }
+    }
+}
+//======================================= End Testimonial Section ============================
+
+//======================================= Start Stylish Section ============================
+.stylish {
+    background: url('../imgs/stylish/stylishBg.png') no-repeat top center;
+    @include bgCover;
+    color: #FFF;
+    position: relative;
+    padding: 60px;
+    .container {
+        position: relative; z-index: 2;
+        .head-border-center:after { background: #FFF }
+        p { color: #c6c7c7; margin-bottom: 30px; font-weight: 300 }
+        button {
+            padding: 8px 30px;
+            background: transparent;
+            border: 2px solid #FFF;
+            border-radius: 6px;
+            font-weight: 600;
+            @include prefixAll(transition, all .4s ease-in-out);
+            &:hover { background: var(--main-Color); border-color: var(--main-Color) }
+        }
+    }
+}
+//======================================= End Stylish Section ============================
+
+//======================================= Start Contact Us ============================
+.contact {
+    padding: 80px 0; background: #FFF;
+    p { font-weight: 300; color: #86878b; margin-bottom: 80px }
+    form {
+        input:not([type="submit"]) {
+            margin-bottom: 10px;
+            border: none;
+            box-shadow: none;
+            border-bottom: 1px solid #CCC;
+            border-radius: 0;
+            font-size: 14px
+        }
+        input:not([type="submit"]):last-of-type { margin-bottom: 35px }
+        textarea {
+            resize: none;
+            height: 158px;
+            border: none;
+            box-shadow: none;
+            border-bottom: 1px solid #CCC;
+            border-radius: 0;
+            font-size: 14px;
+            margin-bottom: 35px
+        }
+        input[type="submit"] {
+            margin: 30px auto 0;
+            display: block;
+            padding: 10px 30px;
+            background: var(--main-Color);
+            border: none;
+            box-shadow: none;
+            border-radius: 6px;
+            font-size: 15px;
+            color: #FFF;
+            font-weight: 600
+        }
+    }
+}
+//======================================= End Contact Us ============================

@@ -1,0 +1,11 @@
+//--> Main Rules
+* { @include prefixAll(box-sizing, border-box); }
+
+//--> Make Style For Body
+body {
+    --main-Color: #{$mainColor};
+    font-family: 'Open Sans', sans-serif;
+}
+
+//--> Style For The h1 Class
+.h1 { font-family: 'Raleway', sans-serif; }

@@ -1,0 +1,23 @@
+//--> Heading With Border
+.head-border {
+    &:after {
+        content: "";
+        display: block;
+        width: 65px;
+        height: 3px;
+        background: #ff8b38;
+        margin-top: 25px
+    }
+}
+
+//-> Heading Wit Border In Center
+.head-border-center {
+    &:after {
+        content: "";
+        display: block;
+        width: 65px;
+        height: 3px;
+        background: #ff8b38;
+        margin: 25px auto
+    }
+}
